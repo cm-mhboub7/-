@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عيد ميلادك 🌸</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="stars-bg">
+  <!-- 💬 النص الترحيبي، يمكن تغييره باللي بغيتي -->
+  <div class="container">
+    <h1 class="title"> عيد ميلاد سعيد يا اغلى ما املك</h1>
+    <p class="subtitle">بغيتك تلعبي معاياهاد لعبه صغيرة لي وجدت لك منها باش تعرفي مفاجاتك 🎁</p>
+
+    <!-- 🌟 زر البداية كينقلك لصفحة اللعبة -->
+    <button class="start-btn" onclick="location.href='game.html'">بجغي عليا الا مستعدة للعبة</button>
+  </div>
+
+  <!-- ✨ سكريبت النجوم المتحركة -->
+  <script>
+    // إنشاء تأثير النجوم المتحركة
+    const body = document.querySelector('body');
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDuration = (1 + Math.random() * 2) + 's';
+      body.appendChild(star);
+    }
+  </script>
+</body>
+</html>
